@@ -6,7 +6,7 @@ library(dplyr)
 # Load and convert tree data to sf (replace 'longitude' and 
 'latitude' with your actual column names)
 
-tree_points <- readreadread.csv("your_csv.csv")
+tree_points <- read.csv("your_csv.csv")
 
 # Convert to sf object assuming coordinates are in 
 longitude/latitude (WGS84)
