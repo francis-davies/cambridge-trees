@@ -1,10 +1,8 @@
 # Load packages
-
 install.packages(c("sf", "leaflet", "dplyr"))
 library(sf)
 library(leaflet)
 library(dplyr)
-
 # Load and convert tree data to sf (replace 'longitude' and 
 'latitude' with your actual column names)
 
@@ -28,6 +26,5 @@ parks <- st_read("your_filepath_RECREATION.shp")
 parks_geo <- st_transform(parks, 4326)
 
 # Make sure geometries are valid
-
 trees_geo <- st_make_valid(trees_geo)
 parks_geo <- st_make_valid(parks_geo)
