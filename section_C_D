@@ -1,1 +1,31 @@
+addCircleMarkers(
+  data=trees_in_parks,
+  radius = 2,
+  color="darkgreen",
+  stroke = FALSE,
+  fillOpacity=0.7,
+  group = "Trees in Parks"
+) %>%
+
+addCircleMarkers(
+  data = trees_outside_parks,
+  radius = 2,
+  color = "orange",
+  stroke = FALSE,
+  fillOpacity = 0.6,
+  group = "Trees Outside Parks"
+)%>%
+  
+addLayersControl(
+    overlayGroops = c("Trees in Parks", "Trees Outside Parks", "Parks"),
+    options = layersControlOptions(collapsed = FALSE)
+) %>%
+
+  
+addLegend(
+    position = "bottomright",
+    colors = c("darkgreen", "orange", "lightblue"),
+    labels = c("Trees in Parks", "Trees Outside Parks", "Parks"),
+    title = "Layers"
+)
 
